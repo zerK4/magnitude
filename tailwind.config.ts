@@ -38,6 +38,10 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      screens: {
+        "sm-h": {"raw": '(max-height: 650px)'}, 
+        "sm-normal": { "raw": '(min-height: 650px)' }
+      }
     },
   },
   plugins: [require("tailwindcss-animate"), iOSHeight],
