@@ -6,7 +6,7 @@ import { NavigationMobile } from "./NavigationMobile";
 
 function Header() {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center px-4">
       <div className="controlledWidth flex justify-between items-center h-24">
         <Link href="/">
           <div className="relative w-20 h-20">

@@ -11,7 +11,7 @@ function Hero() {
   return (
     <div className="w-full relative flex justify-center">
       <div className="controlledWidth relative">
-        <div className="relative w-full h-[50vh] md:h-[90vh] lg:h-[90vh] z-10 pl-12">
+        <div className="relative w-full h-[50vh] md:h-[90vh] lg:h-[90vh] z-10">
           <Image
             src="/assets/hero-image.png"
             fill

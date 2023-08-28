@@ -6,7 +6,7 @@ function TrainerComponent() {
   return (
     <div className="flex justify-center min-h-[40vh] md:mt-32 overflow-hidden">
       <div className="controlledWidth">
-        <h2 className="text-mag text-5xl font-bold">Instructor</h2>
+        <h2 className="text-mag text-5xl font-bold px-2">Instructor</h2>
         <div className="mt-4 flex items-center flex-col md:flex-row">
           <div className="relative h-[40vh] w-full md:w-1/2 overflow-hidden">
             <Image
