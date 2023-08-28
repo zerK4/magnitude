@@ -11,13 +11,13 @@ function Hero() {
   return (
     <div className="w-full relative flex justify-center">
       <div className="controlledWidth relative">
-        <div className="relative w-full h-[60vh] md:h-[90vh] lg:h-[90vh] z-10 translate-x-12">
+        <div className="relative w-full h-[50vh] md:h-[90vh] lg:h-[90vh] z-10 pl-12">
           <Image
             src="/assets/hero-image.png"
             fill
             priority
             alt="Hero image"
-            className="object-scale-down opacity-90"
+            className="object-cover md:object-contain object-top opacity-90 md:translate-x-16"
           />
         </div>
         <div className="absolute left-0 top-20 md:top-60 h-full flex justify-center w-full">
