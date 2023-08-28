@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -9,7 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
   Accordion,
@@ -19,12 +21,19 @@ import {
 } from "./ui/accordion";
 import { components } from "@/lib/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 export function NavigationMobile() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleSheet = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <Sheet>
+    <Sheet open={isOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline">
+        <Button variant="outline" onClick={handleSheet}>
           <GiHamburgerMenu />
         </Button>
       </SheetTrigger>
@@ -56,13 +65,16 @@ export function NavigationMobile() {
                   />
                 </div>
                 {component?.items?.map((item) => (
-                  <Button
-                    key={item.title}
-                    variant={"ghost"}
-                    className="hover:bg-mag w-full bg-gray-100 hover:text-white sm-h:py-4  sm-normal:py-10 flex justify-start"
-                  >
-                    {item.title}
-                  </Button>
+                  <SheetClose asChild key={item.title} onClick={handleSheet}>
+                    <Link href={item.href}>
+                      <Button
+                        variant={"ghost"}
+                        className="hover:bg-mag w-full bg-gray-100 hover:text-white sm-h:py-4  sm-normal:py-10 flex justify-start"
+                      >
+                        {item.title}
+                      </Button>
+                    </Link>
+                  </SheetClose>
                 ))}
                 <SheetClose asChild>
                   <Button className="bg-mag py-8">Close</Button>
