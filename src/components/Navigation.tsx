@@ -18,22 +18,22 @@ import { components } from "@/lib/constants";
 
 export function Navigation() {
   return (
-    <NavigationMenu className="z-20">
-      <NavigationMenuList>
+    <NavigationMenu className="md:flex hidden z-50">
+      <NavigationMenuList className="">
         {components.map((component) => (
           <NavigationMenuItem key={component.name} className="relative">
             <NavigationMenuTrigger className="">
               {component.name}
             </NavigationMenuTrigger>
             <NavigationMenuContent asChild className="absolute left-0">
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[550px] lg:grid-cols-[1fr_1fr]">
+              <ul className="grid gap-3 p-6 min-w-[550px] grid-cols-[1fr_1fr]">
                 <NavigationMenuLink asChild>
                   <div className="w-full h-60 relative">
                     <Image
                       src={component.image}
                       alt="Trainer image"
                       fill
-                      className="object-cover object-left"
+                      className="object-cover object-left rounded-md"
                     />
                   </div>
                 </NavigationMenuLink>

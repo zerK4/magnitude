@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Navigation } from "./Navigation";
 import Image from "next/image";
+import { NavigationMobile } from "./NavigationMobile";
 
 function Header() {
   return (
@@ -16,6 +17,9 @@ function Header() {
           />
         </div>
         <Navigation />
+        <div className="flex md:hidden">
+          <NavigationMobile />
+        </div>
       </div>
     </div>
   );

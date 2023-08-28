@@ -1,6 +1,5 @@
 import React from "react";
 import { AiFillStar, AiFillTrophy, AiFillLike } from "react-icons/ai";
-import { BsAsterisk } from "react-icons/bs";
 import { Separator } from "./ui/separator";
 
 function Banner() {
