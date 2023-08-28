@@ -28,7 +28,10 @@ export function NavigationMobile() {
           <GiHamburgerMenu />
         </Button>
       </SheetTrigger>
-      <SheetContent className="h-screen flex flex-col justify-end" side={"top"}>
+      <SheetContent
+        className="h-screen h-screen-ios flex flex-col justify-end"
+        side={"top"}
+      >
         <SheetHeader className="w-full text-left mt-10 mb-4 px-4">
           <SheetTitle>Meniu</SheetTitle>
         </SheetHeader>
