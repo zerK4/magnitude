@@ -18,7 +18,7 @@ import { components } from "@/lib/constants";
 
 export function Navigation() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="z-20">
       <NavigationMenuList>
         {components.map((component) => (
           <NavigationMenuItem key={component.name} className="relative">
