@@ -41,7 +41,7 @@ export function NavigationMobile() {
               <SheetTrigger asChild>
                 <Button
                   variant="ghost"
-                  className="flex justify-start bg-gray-100 py-10 hover:bg-mag hover:text-white"
+                  className="flex justify-start bg-gray-100 sm-h:py-6 sm-normal:py-10 hover:bg-mag hover:text-white"
                 >
                   {component.name}
                 </Button>
@@ -59,7 +59,7 @@ export function NavigationMobile() {
                   <Button
                     key={item.title}
                     variant={"ghost"}
-                    className="hover:bg-mag w-full bg-gray-100 hover:text-white py-10 flex justify-start"
+                    className="hover:bg-mag w-full bg-gray-100 hover:text-white sm-h:py-4  sm-normal:py-10 flex justify-start"
                   >
                     {item.title}
                   </Button>
