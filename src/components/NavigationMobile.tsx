@@ -84,7 +84,9 @@ export function NavigationMobile() {
           ))}
         </div>
         <SheetClose asChild>
-          <Button className="bg-mag py-8">Close</Button>
+          <Button onClick={handleSheet} className="bg-mag py-8">
+            Close
+          </Button>
         </SheetClose>
       </SheetContent>
     </Sheet>
